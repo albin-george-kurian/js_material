@@ -1,0 +1,1431 @@
+*****************************************************javaScript*****************************************************************
+
+    * JavaScript is the world's most popular programming language.
+    * JavaScript is the programming language of the Web.
+    * JavaScript is easy to learn.
+    
+    * JavaScript is a high-level, interpreted programming language.
+    * It is widely used for front-end web development and server-side programming.
+    * It is a dynamically typed, object-oriented language.
+      In programming, "dynamically typed" refers to a type system where the type of a variable is determined at runtime, rather than being explicitly defined by the programmer at the time the variable is declared.In dynamically typed languages, variables can be assigned values of different types during the execution of the program. For example, in JavaScript, a variable can be declared and assigned a value of type string, and then later in the program, the same variable can be assigned a value of type number.     
+    * JavaScript is known for its versatility, ease of use, and ability to handle complex tasks.
+    * It is used to add interactivity to websites, such as responding to user input, creating animations, and manipulating
+         the DOM.
+    * JavaScript is an essential component of modern web development and is supported by all major web browsers.
+    * It is also used for other applications, including mobile app development, desktop software development, and server-side   programming.
+    * JavaScript is an important skill for web developers and is used in a wide range of industries.
+
+*****************************************************variables*****************************************************************
+    a variable is a container that holds a value. Variables are used to store and manipulate data in a program.
+    syntax:
+
+      var variableName = value;
+      let variableName = value;
+      const variableName = value;
+
+      *var is keyword used to declare a variable in JavaScript, for several reasons
+      *here const keyword is used to declare constant values such as names,numbers.....
+      *let keyword is used to declare variables MUCH RECOMMANDED TO USE
+
+
+                                              -------extra--------
+    typeof() = opr is used to return type of an variable
+    ex:
+        var qty = 12;
+        let container = typeof(qty);
+        console.log(container);
+
+        output:
+        number
+
+            ---------------------------------------------------------------------------------------------------------------
+________________________________________________________________________________________________________________________________
+
+*****************************************************DataTypes*****************************************************************
+  1.number = Used to represent numeric values, including integers and floating-point numbers.
+            limit of int is  (-2^53 + 1) to (2^53 - 1)
+      ex: let number = 20;
+      console.log(number);
+  
+  2.String =  Used to represent a sequence of characters, such as words or sentences. Strings are enclosed in either single or double quotes.
+      ex: let name = "Albin George Kurian";
+
+  3.Boolean = Boolean: Used to represent true or false values
+      ex: const male = true;
+          const female = false;
+
+  4.Null = used to represent an intentional non-value
+      ex: let value = null;    
+
+  5.BigInt = to avoid limitation of int we can use bigInt 
+      ex: const x = BigInt(9007199254740992);
+          const y = 9007199254740992n;
+   
+    ____________________________________________________________________________________________________________________________
+
+*****************************************************Arrays*****************************************************************
+    * An array  allows you to store a collection of values under a single variable name. Arrays are zero-indexed, meaning that the first element    in   the array has an index of 0, the second has an index of 1, and so on.
+
+    * they can contain elements of any data type, including numbers, strings, objects, and even other arrays.
+      ex:
+        var fruits = var fruits = [true, 1000, "cherry"];
+
+        console.log(fruits);
+        console.log(fruits[0]);
+        console.log(fruits[100])
+
+      output:
+      [true, 1000, "cherry"]
+      1000
+      undefined // does not contain value
+    ____________________________________________________________________________________________________________________________
+
+*****************************************************math_operator**************************************************************
+1.Addition (+)
+2.Subtraction (-)
+3.Multiplication (*)
+4.Division (/)
+5.Modulus (%), returns the remainder after division.
+6.Exponentiation (**), raises a number to the power of another number.
+7.Increment (++), increases a value by 1.
+8.Decrement (--), decreases a value by 1.
+  
+pgm:
+                  let x = 5;
+                  let y = 3;
+
+                  let sum = x + y;
+                  let difference = x - y;
+                  let product = x * y;
+                  let quotient = x / y;
+                  let modulus = x % y;
+                  let power = x ** y;
+
+                  console.log("Sum: " + sum);
+                  console.log("Difference: " + difference);
+                  console.log("Product: " + product);
+                  console.log("Quotient: " + quotient);
+                  console.log("Modulus: " + modulus);
+                  console.log("Power: " + power);
+output:
+                  Sum: 8
+                  Difference: 2
+                  Product: 15
+                  Quotient: 1.6666666666666667
+                  Modulus: 2
+                  Power: 125
+    ____________________________________________________________________________________________________________________________
+
+
+*****************************************************increment and Decrement opr************************************************
+1.increment:
+        myage = 18;
+        myage++;// adds by one 18+1
+2.Decrement:
+        myage = 20;
+        myage--;//substract by one 20-1
+        
+    ____________________________________________________________________________________________________________________________
+
+*****************************************************functions**************************************************************
+    *function is a block of code designed to perform a particular task. Functions can be called in multiple places
+    *function allows for code reuse and helps make the code more readable
+    *javaScript consider an function as an object
+    *The syntax for defining a function in JavaScript is as follows:
+
+        syntax:
+            function functionName() {
+            // code to be executed
+            }
+
+            functionName(); // calling an function
+
+
+    2.parameterized function:
+        *an function with parameters is called parameterized function and it can have an return value
+
+        syntax:
+            function functionName(parameters) {
+            // code to be executed
+            }
+
+            functionName(parameters); // calling an function
+    ____________________________________________________________________________________________________________________________
+
+*****************************************************if statment**************************************************************
+    *A JavaScript conditional statement is used to perform different actions based on different conditions
+    syntax:
+        if (condition)
+        {
+            // code to be executed if condition is true
+        } 
+        else
+        {
+            // code to be executed if condition is false 
+        }
+
+    
+    *else if:
+
+    syntax:
+        if (condition1){
+            // code to be executed if condition1 is true
+        }
+        else if (condition2){
+            // code to be executed if condition1 is false and condition2 is true
+        } else{
+            // code to be executed if both condition1 and condition2 are false
+        }
+
+    ____________________________________________________________________________________________________________________________
+
+*****************************************************logical_operators**********************************************************
+
+    1.&& (Logical AND) - Returns true if both operands are true, and false otherwise.
+        ex:             let age = 18;
+                        let voteId = true;
+
+                        if(age>=18 && voteId){
+                            console.log("you can vote");
+                            return
+                        }
+                        else if(!voteID){
+                            console.log("id proof reqried");
+                        }
+                        else if(age<18){
+                            console.log("you cannoot vote because age < 18");
+                        }
+        output:you can vote
+
+                        
+    2.|| (Logical OR) - Returns true if either of the operands is true, and false 
+    ex:                 let bribe = true;
+                        let total = 103;
+
+                        if(bribe || total >=100){
+                            console.log("you passed");
+                            return
+                        }
+                        else{
+                            console.log("faild");
+                        }
+    output:you passed                
+
+    3.! (Logical NOT) - Reverses the logical state of its operand. If a value is true, ! will return false
+    ex:                 let isStudent = true;
+                        if(!isStudent){
+                            console.log("you are an student");
+                            return
+                        }
+                        else{
+                            console.log("u r student");
+                        }
+    output:u r student                   
+
+    4.== (Equal) - Returns true if the operands are equal, and false otherwise
+    ex:                 let x = 5;
+                        let y = 5;
+                        if(x == y){
+                            console.log("x equal to y ");
+                            return
+                        }
+                        else{
+                            console.log("x is not equal to y");
+                        }
+    output:x equal to y                 
+
+    5.!= (Not equal) - Returns true if the operands are not equal, and false otherwise.
+    ex:                 if(19 != 18){
+                            console.log("19 is not equal to 18");
+                        }
+    output:19 is not equal to 18               
+                                    
+    6.=== (Strict equal) - Returns true if the operands are equal and of the same DATATYPE, and false otherwise.
+    ex:                 if( 5 === '5'){
+                            console.log("both are not equal because types are different");
+                            // 5 is number 
+                            // '5' is string 
+                        }
+                        else if(5 === 5){
+                            console.log("both are equal and of same type");
+                            
+                        }
+    output:both are equal and of same type
+    
+    7.!== (Strict not equal) - Returns true if the operands are not equal or not of the same type, and false otherwise.
+    ex:                 if( 5 !== '5'){
+                            console.log("both are not equal because types are different");
+                            // 5 is number 
+                            // '5' is string 
+                        }
+                        else if(5 !== 5){
+                            console.log("both are equal and of same type");
+                            
+                        }
+    output:both are not equal because types are different
+
+   ____________________________________________________________________________________________________________________________
+
+*****************************************************array_operations**********************************************************
+    *In JavaScript, an array is an object that stores a collection of values of different data types, such as numbers,          strings,and objects. An array is declared using square brackets [].array index starts from 0.
+    ex:
+                        let colors = ['red', 'green', 'blue'];
+                        console.log(colors[0]); // Output: red
+                        colors[0] = 'yellow';
+                        console.log(colors[0]); // Output: yellow
+    
+    1.build-in-methods:
+        1.1 push(): Adds one or more elements to the END of an array and returns the new LENGTH of the array.
+        ex:              let fruits = ["apple"];
+                         let newLen = fruits.push("banana");
+                         console.log(fruits);// output: apple banana
+                         console.log(newLength);// output: 2
+
+        1.2 pop(): Removes the last element of an array and returns the REMOVED ELEMENT.
+        ex:             let fruits = ["apple","banana","orange"];
+                        let removedElement = fruits.pop();
+                        console.log(removedElement);//output: orange
+                        console.log(fruits);//output:apple orange
+
+        1.3 shift(): Removes the first element of an array and returns the REMOVED ELEMENT.
+        ex:             let fruits = ["banana","apple","orange"]
+                        let removedElement = fruits.shift();
+                        console.log(removedElement);//output: orange
+                        console.log(fruits);//output: apple orange 
+
+        1.4 unshift(): Adds one or more elements to the BEGINING of an array and returns the new LENGTH of the array.
+        ex:             let fruits = ['apple', 'banana'];
+                        fruits.unshift('mango');
+                        console.log(fruits); // Output: [ 'mango', 'apple', 'banana' ]
+
+        1.5 slice(): Returns a shallow COPY of a portion of an array. The first argument specifies the START INDEX and the      second argument specifies the END INDEX
+        ex:             let fruits = ['apple', 'banana', 'mango'];
+                        let citrusFruits = fruits.slice(0, 2);
+                        console.log(fruits); // Output: [ 'apple', 'banana', 'mango' ]
+                        console.log(citrusFruits); // Output: [ 'apple', 'banana' ]
+
+        1.6 sort(): SORT the elements of an array in place and returns the SORTED ARRAY. By default, it sorts the elements as strings in ALPHABATICAL order
+        ex:            let fruits = ['mango', 'banana', 'apple'];
+                       fruits.sort();
+                       console.log(fruits); // Output: [ 'apple', 'banana', 'mango' ]
+    
+        1.7 indexOf() method in JavaScript is used to search for a specified item in an array and returns its index position.
+             if position is not found it return -1
+        ex:             const fruits = ['apple', 'banana', 'mango', 'orange'];
+                        const index = fruits.indexOf('banana');
+                        console.log(index); // Output: 1
+        
+        1.8 splice() splice method in JavaScript is used to change the contents of an array by removing or adding elements.
+        ex:             let numbers = [1, 2, 3, 4, 5];
+                        numbers.splice(1, 2);
+                        console.log(numbers); 
+                        // Output: [1, 4, 5]
+
+                       *can be also used to replace values
+
+                        let myArray = ["apple", "banana", "orange"];
+                        myArray.splice(1, 1, "grape");
+                        console.log(myArray);
+                         // Output: ["apple", "grape", "orange"]
+
+
+        1.9 includes()  The includes() method returns true if a string contains a specified string
+        ex:             const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                        fruits.includes("Mango");
+
+                        Start the search at position 3:
+                        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                        fruits.includes("Banana", 3);
+        
+        1.10 isNaN() isNotanNumber returns true if given value is not an number
+        Ex:             const val = "string";
+                        const val2 = 2723;
+
+                        console.log(isNaN(val))// true because it is an String
+                        console.log(isNaN(val2))// returns false 
+        
+        1.11 toString() convert the value into string
+        Ex:             
+                        let str = num.toString(); // str is now "42"
+
+                        // converting a boolean to a string
+                        let bool = true;
+                        let str = bool.toString(); // str is now "true"
+
+                        // converting an array to a string
+                        let arr = [1, 2, 3];
+                        let str = arr.toString(); // str is now "1,2,3"
+
+                        // converting an object to a string
+                        let obj = { name: "John", age: 30 };
+                        let str = JSON.stringify(obj); // str is now '{"name":"John","age":30}'
+
+
+        1.12 typeof() is used to find typeof an variable
+        Ex:             typeof 42; // "number"
+                        typeof "hello"; // "string"
+                        typeof true; // "boolean"
+                        typeof undefined; // "undefined"
+                        typeof null; // "object" (this is a known issue in JavaScript)
+                        typeof []; // "object"
+                        typeof {}; // "object"
+                        typeof function() {}; // "function"
+
+        1.13 Boolean() function is a built-in function that can be used to convert a value to a boolean data type
+        Ex:             Boolean(0); // false
+                        Boolean(1); // true
+                        Boolean(-1); // true
+                        Boolean(""); // false
+                        Boolean("hello"); // true
+                        Boolean(null); // false
+                        Boolean(undefined); // false
+                        Boolean([]); // true
+                        Boolean({}); // true
+                        Boolean(function() {}); // true
+
+        1.14 JSON.stringify() method to convert an object into a JSON string. The JSON.stringify() method takes an object as its parameter and returns a string representing the JSON data.
+        Ex:            const myObj = {
+                        name: "John",
+                        age: 30,
+                        city: "New York"
+                        };
+
+                        const myJsonString = JSON.stringify(myObj);
+                        console.log(myJsonString); // Output: {"name":"John","age":30,"city":"New York"}
+
+        1.15 JSON.parse() method to convert a JSON string back into an object. The JSON.parse() method takes a JSON string as its parameter and returns an object representing the parsed JSON data.
+        Ex:            const myJsonString = '{"name":"John","age":30,"city":"New York"}';
+                        const myObj = JSON.parse(myJsonString);
+                        console.log(myObj); // Output: { name: 'John', age: 30, city: 'New York' }
+
+
+   ____________________________________________________________________________________________________________________________
+
+*****************************************************loops**********************************************************
+    1. In JavaScript, loops are used to execute a block of code repeatedly until a specified condition is met
+
+    2.for loop: executes a block of code a specified number of times.
+    ex:                 for (let i = 0; i < 10; i++) {
+                        console.log("The value of i is:", i);
+                        }
+    output:             The value of i is: 0
+                        The value of i is: 1
+                        The value of i is: 2
+                        The value of i is: 3
+                        The value of i is: 4
+                        The value of i is: 5
+                        The value of i is: 6
+                        The value of i is: 7
+                        The value of i is: 8
+                        The value of i is: 9
+
+    2.1 while loop: executes a block of code while a specified condition is true.
+    ex:                 let i = 0;
+                        while (i < 10) {
+                         console.log("The value of i is:", i);
+                        i++;
+                        }
+    output:             The value of i is: 0
+                        The value of i is: 1
+                        The value of i is: 2
+                        The value of i is: 3
+                        The value of i is: 4
+                        The value of i is: 5
+                        The value of i is: 6
+                        The value of i is: 7
+                        The value of i is: 8
+                        The value of i is: 9
+
+    2.2 do...while: loop which is similar to a while loop, but the code inside the loop is always executed once, and then the condition is checked.
+    ex:                 let i = 0;
+                        do {
+                        console.log("The value of i is:", i);
+                        i++;
+                        } while (i < 10);
+    
+    output:             The value of i is: 0
+                        The value of i is: 1
+                        The value of i is: 2
+                        The value of i is: 3
+                        The value of i is: 4
+                        The value of i is: 5
+                        The value of i is: 6
+                        The value of i is: 7
+                        The value of i is: 8
+                        The value of i is: 9
+   ____________________________________________________________________________________________________________________________
+    
+    *****************************************************for of loop**********************************************************
+       1.The "for of" loop in JavaScript is used to iterate over the elements of an iterable object, such as arrays, strings
+
+       2.for (let element of iterable) {
+          // code to be executed for each element
+            }
+
+        ex:
+        let fruits = ['apple', 'banana', 'cherry'];
+
+        for (let fruit of fruits) {
+        console.log(fruit);
+        }//apple banana cherry
+
+
+
+
+
+
+   ____________________________________________________________________________________________________________________________
+
+    *****************************************************   s**********************************************************
+    1.in JavaScript, an object is a data structure that consists of key-value pairs. It is a collection of properties, with    each property having a name (or key) and a value. 
+
+    2.Objects in JavaScript can be used to store and manage data, organize code into reusable components, and model real-world entities. 
+
+    3.           NORMAL_OBJECT
+                        let person = {
+                        name:"albin george Kurian",
+                        dob:"19",
+                        job:"null",
+                        student:"true"
+                                };
+
+                        console.log(person.name); //output: albin george Kurian
+                        console.log(person['name']);
+                        console.log(person.dob);  //output: 19
+                        console.log(person.student);  //output: true
+
+
+    4.          OBJECT_WITH_FUNCTION
+                       let student = {
+                        name:"albin",
+                        dob:"06/07/2003",
+                        student:"true",
+                        speak: function(){
+                            console.log("hai my name is albin");
+                        }
+                       };
+            
+                       student.speak();//output:hai my name is albin
+                       console.log(student.name);//output:albin
+
+
+    5.         OBJECT_INSIDE_OBJECT
+                    let student ={
+                        name:'albin',
+                        student:'true',
+                        dob:'06/07/2003',
+
+                        //object_inside_object
+
+                        address:{
+                            city:'mannarkkad',
+                            pin:'678598',
+                            house name:'maliyekkal',
+                            state:'pkd'
+                        }
+
+                    };
+
+                    console.log(student.address.city);//output:mannarkkad
+                    console.log(student['address']['city'])
+
+    7.          copying an object to another object
+
+                   let student={
+                    'name':'albin george kurian',
+                    'age':'19',
+                    'isMale':'true'
+                   }
+
+
+                    let student2 = {...student}
+
+                    //if we want to change an property in student
+
+                    let student2 = {...student,name:"ashwin"}
+
+    6.Build-in methods
+            6.1 Object.keys()
+            Ex:
+                const myObj = {
+                    name: 'John',
+                    age: 30,
+                    gender: 'male'
+                    };
+
+                    const keys = Object.keys(myObj);
+
+                    console.log(keys); // Output: ['name', 'age', 'gender']
+
+            *reurns an array of keys 
+
+            6.2 Object.values()
+
+            *Object.values() is a built-in JavaScript method that returns an array containing the values of an object
+
+            ex:
+                const myObject = {a: 1, b: 2, c: 3};
+                const valuesArray = Object.values(myObject);
+                console.log(valuesArray); // Output: [1, 2, 3]
+
+    7.remove/delete element form an object
+            EX:
+            let myObj = {
+                name: 'John',
+                age: 30,
+                email: 'john@example.com'
+                };
+
+                delete myObj.email;
+
+                console.log(myObj);
+                // Output: { name: 'John', age: 30 }
+
+
+            *delete object.key
+
+*****************************************************scope**********************************************************
+1.Scope in JavaScript refers to the accessibility of variables and functions in different parts of a program. JavaScript has two types of scope: global scope and local scope.
+
+2. Global scope refers to the scope outside of any function. Variables declared in the global scope are accessible from anywhere in the program, including inside functions.
+
+3. Local scope refers to the scope inside a function. Variables declared inside a function have local scope and are only accessible within that function.
+
+   ex:                              let name = 'John'; // global scope
+
+                                    function greet() {
+                                    let message = 'Hello ' + name; // local scope
+                                    console.log(message);
+                                    }
+
+                                    greet(); // logs "Hello John"
+                                    console.log(message); // ReferenceError: message is not defined
+  ____________________________________________________________________________________________________________________________
+
+*****************************************************DOM**********************************************************
+1. The DOM is a way for JavaScript to access and manipulate HTML documents. It views the HTML document as a tree of elements, and allows you to add, change, or remove elements and their content or styles. This makes it possible to create dynamic, interactive websites.
+
+ex: Accessing an element by ID:
+    const myElement = document.getElementById("my-element");
+
+    Modifying element content:
+    myElement.innerText = "Hello, World!";
+
+    Modifying element styles:
+    myElement.style.color = "red";
+
+    create a new element:
+    const newElement = document.createElement("p");
+    newElement.innerHTML = "This is a new element";
+    document.body.appendChild(newElement);// adding element to browser
+
+    innerText vs innerHTML
+    *in innerHTML we can define HTML properties 
+    ex: button.innerHTML = "hai <em>albin</em>"
+
+    *in innerText we can change value 
+    Ex: button.innerText = "hai"
+
+
+    Event handling:
+    myElement.addEventListener("click", function() {
+    console.log("Element was clicked");
+    });
+
+2.DOM tree example
+        <html>//firstElementChild
+            <head>
+                <title>Example Page</title>
+            </head>
+            <body>
+                <header >
+                <nav>
+                    <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                </header>
+                <main>
+                <h1>Welcome to My Website</h1>
+                <p>Here you can find information about me and my interests.</p>
+                </main>
+                <footer>
+                <p>Copyright © 2022</p>
+                </footer>
+                <script src="/js/index.js"></script>
+            </body>
+        </html>
+
+    document
+       |
+        HTML
+            |
+            head
+                |
+                title
+            |
+            body
+                |
+                header    
+                    |
+                    nav
+                        |
+                        uL
+                          |
+                           li
+                |
+                main
+                    |
+                    h1
+                     |
+                     p
+                |
+                footer
+                    |
+                    p
+                |
+                script
+
+        output here
+        2.1 document.firstElementChild // html
+            document.firstElementChild.lastElementChild // body
+
+
+                                        -------Extra--------
+                                        <ul class="li-items">
+                                        <li>hai</li>
+                                        <li>hello</li>
+                                        <li>bai</li>
+                                        </ul>
+
+                                        while we use,
+                                        *document.getElementByTagName('li');// this will return an array of list
+                                        
+                                        so we cant specify an perticular property to an element
+
+                                        *document.getElementByTagName('li').style.color = 'red'//wont work
+
+                                        because it returns array of list so if we need to set color to specific element so we can use array 
+
+                                        *document.getElementByTagName('li')[0].style.color = 'red'
+                                        output: set color red to hai in list
+
+                                        *same for getElementByClassName('li-items');
+                                        document.getElementByClassName('li')[0].style.color = 'red'
+
+                                        // we have to use array for selecting an perticular element
+                                        
+                                       * document.getElementByTagName('li');
+                                        because it returns array of list so if we need to set color to specific element so we can use array
+                                        
+                                       *document.querySelectorAll();// returns an array so use array to specify proprty to each element
+
+                                        ----------------------------------------------------
+3.attribute = function helps us to get attributes of an selected tag
+ex:            document.querySelector("body").attributes;
+
+4.getAttribute = function helps us to return value of an single attribute that have selected
+ex:              document.querySelector("a").getAttribute("href");
+
+5.setAttribute = function help to reset an value of an attribute 
+ex: for example there is an a tag and we need to change the value to othersite
+                document.querySelector("a").setAttribute("href","otherSelector.com");
+
+6.EventListener--------
+
+    myElement.addEventListener("click", function() {
+    console.log("Element was clicked");
+    });
+            6.1 looping througth EventListener
+                        let numberOfDrum = document.querySelectorAll('.drum').length;
+                        
+                        for(let i=0;i<numberOfDrum;i++){
+
+                        document.querySelectorAll('.drum')[i].addEventListener('click',function(){
+                            alert('hello')
+                        })
+
+                        }
+
+7.playing sound in js
+
+            let audio = new Audio("file.mp3");
+            audio.play();
+
+            .play() is an function that helps to play audio
+
+
+8.constructor function in js
+
+        *the naming convention for constructor functions is to start with an uppercase letter.
+
+        *A constructor function is a special type of function in JavaScript that is used to create objects. It is called with the "new" keyword and is used to set properties on the object being created 
+
+        ex:
+                function Car(make, model, year) {
+                    this.make = make;
+                    this.model = model;
+                    this.year = year;
+                    }
+
+                    var myCar = new Car("Toyota", "Camry", 2020);
+
+9.switch in js
+        
+        switch (expression) {
+  case value1:
+    // statements to be executed if expression matches value1
+    break;
+  case value2:
+    // statements to be executed if expression matches value2
+    break;
+  ...
+  case valueN:
+    // statements to be executed if expression matches valueN
+    break;
+  default:
+    // statements to be executed if no case matches the expression
+    break;
+}
+
+10.setTimeout(): this is an build in js function that accpets an function that will executes after certain amount of mentioned time
+Ex:
+    setTimeout(function() {
+    console.log('Hello, world!');
+    }, 1000);
+
+    the above code anonymous function executes after the mentioned time
+
+11. .createElement():creates an element
+    *create element just creates an HTML element
+    *set value to the element thats created
+    *then add element to HTML
+
+    ex:
+        const main = document.createElement('h1');// element created
+        main.innerHTML = "hai";//adding value to created element
+        document.body.appendChild(main);//append element to body or we can just specify the DOM part after document
+                        OR
+        document.body.append(main);
+
+        *append is new and append child is older,can also contain text
+12. remove elements
+     *we can remove elements by just specifying element
+     TAKING ABOVE CODE AS EXAMPLE 
+     then,
+        main.remove();// the code will remove main in html that were created
+
+13. Arrow function:
+    *Arrow functions are a shorthand syntax for creating functions in JavaScript. They were introduced in ECMAScript 6 (ES6) and provide a more concise and cleaner syntax for writing functions.
+
+    ex:
+        const multiply = (a, b) =>{ a * b};
+
+        console.log(multiply(2, 3)); // 6
+        console.log(multiply(4, 5)); // 20
+        console.log(multiply(0, 10)); // 0
+
+
+        const person = {
+        firstName: 'John',
+        lastName: 'Doe',
+        sayHi: function() {
+            setTimeout(() => console.log(`Hi, my name is ${this.firstName} ${this.lastName}`), 1000);
+        }
+        };
+        person.sayHi(); // prints "Hi, my name is John Doe" after 1 second
+
+
+        const add = (a, b) => {
+        return a + b;
+        };
+
+        console.log(add(2, 3)); // Output: 5
+        console.log(add(5, 7)); // Output: 12
+
+
+
+14.event bubbling:
+    *this is an process of calling event of parents(all of them) when there children's event is called.
+    EX:
+        <html>
+        <body>
+        <div>
+            <button></button>
+        </div>
+        </body>
+        </html>
+
+        document.button.addEventListener('click',()=>{
+            alert("button where pressed");
+        })
+
+         document.body.addEventListener('click',()=>{
+            alert("body where pressed");
+        })
+
+         document.html.addEventListener('click',()=>{
+            alert("html where pressed");
+        })
+
+        //button where pressed,  body where pressed,  html where pressed
+
+        *if we pressed button it will triger alert of button and its parent elements event such as body,html
+        *it will be in-order
+        *in function there are 3rd argument 
+                false: EVENT BUBBLING(default)
+                true: EVENT CAPURING
+            
+13.event capuring
+    *EVENT CAPURING is the opposite of the event bubbling it starts from the the first parent.
+    *it-will be in REVERSE order of event bubbling
+    
+    ex:
+        <html>
+        <body>
+        <div>
+            <button></button>
+        </div>
+        </body>
+        </html>
+
+        document.button.addEventListener('click',()=>{
+            alert("button where pressed");
+        })
+
+         document.body.addEventListener('click',()=>{
+            alert("body where pressed");
+        })
+
+         document.html.addEventListener('click',()=>{
+            alert("html where pressed");
+        })
+        // html where pressed, body where pressed, button where pressed
+
+14.WE CAN AVOID EVENT BUBBLING AND EVENT CAPURING?
+
+       14.1 *while calling event we need to pass event OBJECT to function and in the function event.stopPropagation()
+        ex:
+            const targetElement = document.querySelector('#target');
+
+            targetElement.addEventListener('click', function(event) {
+            event.stopPropagation();
+            // Do something with the event on the target element
+            });
+
+        14.2  calling as 3rd argument
+        ex:
+          *  document.button.addEventListener('click',()=>{
+            alert("button where pressed");
+            },{
+                caputure:true;
+            })
+
+         *addEventListener('click',functionName,{
+            caputure:true;
+            //once:true;
+         })
+
+15. we can prevent default behaviour of html process
+    ex:For example, when a user clicks on a hyperlink the default behavior is to navigate to the URL specified in the href attribute the default behavior is to navigate to the URL specified in the href attribute
+    
+    *he event.preventDefault() method is called to prevent the default behavior of the link, which is to navigate to the URL
+
+
+            const link = document.querySelector('a');
+
+            // Add an event listener to the link
+            link.addEventListener('click', function(event) {
+            // Prevent the default link click behavior
+            event.preventDefault();
+            
+            // Do some custom action
+            console.log('Link clicked!');
+            });
+
+
+
+
+16.removeEventListener
+    *any update on Web 3.0 Blockchain Developer Learning Path we are really waiting to add new contents
+
+    Ex:
+        const button1 = document.querySelector('button');
+        const container = document.querySelector('.main-container');
+
+        button1.addEventListener('click',makeChange)
+        container.addEventListener('click',remove)
+
+        function makeChange(){
+            button1.innerHTML = Math.random();
+        }
+
+        function remove(){
+            container.removeEventListener('click',makeChange);
+        }
+
+17. Promise: Promises in JavaScript are a way to handle asynchronous operations. They provide a cleaner and more concise syntax for handling asynchronous operations compared to using callbacks.
+
+    ex:     const myPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('Success!');
+            }, 1000);
+            });
+
+            myPromise.then((result) => {
+            console.log(result); // Output: Success!
+            });
+                
+        *This example creates a new promise that resolves after 1 second with the string "Success!". The then method is used to handle the resolved value of the promise.
+
+    ex:Promise WITH ERRORS
+        const myPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject('Error!');
+            }, 1000);
+            });
+
+            myPromise.catch((error) => {
+            console.log(error); // Output: Error!
+            });
+
+
+
+18. Promise API:
+        18.1 Promise.all:
+                        Promise.all() is a method that takes an array of Promises and returns a Promise that resolves when all the Promises in the array have resolved.
+                    ex:
+                        Promise.all([promise1, promise2, promise3])
+                        .then(results => {
+                            // handle the results of all the promises
+                        })
+                        .catch(error => {
+                            // handle the error if any of the promises is rejected
+                        });
+
+                    ex:let p1 = new Promise((resolve,reject)=>{
+                            setTimeout(()=>{
+                                resolve(4);
+                            },3000)
+                        })
+
+                        let p2 = new Promise((resolve,reject)=>{
+                            setTimeout(()=>{
+                                resolve(3);
+                            },1000)
+                        })
+
+                        let p3 = new Promise((resolve,reject)=>{
+                            setTimeout(()=>{
+                                resolve(2);
+                            },2000)
+                        })
+
+                        let promise_all = Promise.all([p1,p2,p3]).then((value)=>{
+                            console.log(value)
+                        })
+
+                        // error if one of the value fails
+
+        18.2 Promise.allSettled:
+                        ex:let p1 = new Promise((resolve,reject)=>{
+                                setTimeout(()=>{
+                                    resolve(4);
+                                },3000)
+                            })
+
+                            let p2 = new Promise((resolve,reject)=>{
+                                setTimeout(()=>{
+                                    resolve(3);
+                                },1000)
+                            })
+
+                            let p3 = new Promise((resolve,reject)=>{
+                                setTimeout(()=>{
+                                    resolve(2);
+                                },2000)
+                            })
+
+                            let promise_all = Promise.allSettled([p1,p2,p3]).then((value)=>{
+                                console.log(value)
+                            })
+                            //output
+                            0:{status: 'fulfilled', value: 4}
+                            1:{status: 'fulfilled', value: 3}
+                            2: {status: 'fulfilled', value: 2}
+        18.3 Promise.race
+        18.4 Promise.any
+        18.5 Promise.resolve
+        18.6 Promise.reject
+19.async/await :
+            it is an spl syntax that used to work with Promises
+            *function can be async by using asyn keyword
+            *async returns an Promise
+
+            
+            ex:
+            async function val() {
+                        let value = new Promise((resolve,reject)=>{
+                            setTimeout(()=>{
+                                resolve("1")
+                            },1000)
+                        })
+
+
+                        let value2 = new Promise((resolve,reject)=>{
+                            setTimeout(()=>{
+                                resolve("2")
+                            },2000)
+                            
+                        })
+
+
+                        let val1 = await value
+                        console.log("val1 val1",val1)
+
+                        let val2 = await value2
+                        console.log("val1 ",val2)
+            }
+
+            let prom1 = async ()=>{
+                     console.log("hai")
+            }   
+
+            let main1 = async ()=>{
+                let a = await val()
+                let b = await prom1()
+
+                console.log(a)
+                console.log(b)
+            }
+
+
+20. synchronous actions in js: are actions that we initate now and they finish ONE-BY-ONE
+    Ex: normal js program like,
+        let a = 1;
+        let b = 2;
+        let c = 3;
+
+        the above code is an example for synchronous action it will execute one-by-one
+
+20.asynchronous action :  are actions that we initate now and they finish LATER
+    ex: setTimeOut
+            setTimeOut(()=>{
+                console.log('hai');
+            },3000)
+
+21. ERRORS IN JS
+    *21.1 TypeError:Commonly thrown when the variable is not the expected type for the operation. Here's a couple examples:
+            const x = 3;
+            x();
+           // Throws TypeError: x is not a function.
+            let b;
+            b.prop;
+            //Throws TypeError: Cannot read property 'prop' of undefined
+    
+    21.2 Reference Error : Thrown in cases where the variable is not defined. More technically, the reference cannot be found:
+                            z();
+                            Throws ReferenceError: z is not defined.
+
+    21.3 Syntax Error : Thrown in cases where the code is not valid JavaScript:
+                        const a = 3;
+                        a.72;
+                        Throws SyntaxError: Unexpected number.
+
+    21.4 Range Error: Thrown when a value is passed to a function where the value is not within the intended range of accepted values. For example, an array initializer:
+                        new Array(Infinity)
+                        Throws RangeError: Invalid array length.                    
+
+22.Destructuring
+    22.1 Object Destructuring: 
+    Object destructuring allows you to extract values from an object and assign them to variables with the same name in a single statement. The syntax for object destructuring is as follows:
+    
+            let {property1: variable1, property2: variable2, ..., propertyN: variableN} = object;
+
+
+        ex:         const person = {
+                    firstName: 'John',
+                    lastName: 'Doe',
+                    age: 30
+                    };
+
+                    const {firstName, lastName, age} = person;
+
+                    console.log(firstName); // output: 'John'
+                    console.log(lastName);  // output: 'Doe'
+                    console.log(age);       // output: 30
+
+
+    22.2 destructure arrays:
+        ex:
+            const arr = ["hello", "world"];
+            const [a, b] = arr;
+            console.log(a); // hello
+            console.log(b); // world
+##################################################################Error_object####################################################################
+
+
+# ERRORS IN JS
+
+    *21.1 TypeError:Commonly thrown when the variable is not the expected type for the operation. Here's a couple examples:
+
+            const x = 3;
+            x();
+           // Throws TypeError: x is not a function.
+            let b;
+            b.prop;
+         //Throws TypeError: Cannot read property 'prop' of undefined
+    
+    21.2 Reference Error : Thrown in cases where the variable is not defined. More technically, the reference cannot be found:
+
+                            z();
+                            Throws ReferenceError: z is not defined.
+
+    21.3 Syntax Error : Thrown in cases where the code is not valid JavaScript:
+
+                        const a = 3;
+                        a.72;
+                        Throws SyntaxError: Unexpected number.
+
+    21.4 Range Error: Thrown when a value is passed to a function where the value is not within the intended range of accepted values. For example, an array initializer:
+
+                        new Array(Infinity)
+                        Throws RangeError: Invalid array length
+
+# main-build built-in errors
+    .name:name of the error
+    .message:what kind of error is present
+    error: it contain combination of name of error and message
+
+    ex:
+                try{
+
+                albin
+
+                }
+            catch(error){
+                console.log(error);//ReferenceError: albin is not defined at <anonymous>:2:5
+                console.log(error.name)//ReferenceError
+                console.log(error.message)//albin is not defined
+                 }
+
+#try catch
+    ex:  
+                try{
+
+                }catch(){
+
+                }
+
+
+# custom_error
+
+        throw new Error("not defined")
+
+        ex: 
+
+                try{
+                throw new Error("this is an error")
+                }
+                catch(error){
+                    console.log(error)//Error: this is an error at <anonymous>:2:11
+                    console.log(error.name)//Error
+                    console.log(error.message)//this is an error
+                }
+
+#ReferrenceError
+        ex:
+        try{
+            throw new ReferenceError("hai")
+        }catch(error){
+            console.log(error)//ReferenceError: hai at <anonymous>:2:11
+            console.log(error.name)//ReferenceError
+            console.log(error.message)//hai
+        }
+
+
+# try-catch-finally
+finally block runs if it produce error or not
+
+        syntax:
+            try{
+
+            }catch(PArameterName){
+
+            }finally{
+
+            }
+
+        ex:
+             try{
+                if('str'!=='stR'){
+                    throw new Error("true is not eql to false")
+                }
+                }catch(err){
+                    console.log(err)
+                    console.log(err.name)
+                    console.log(err.message)
+                }finally{
+                    console.log("it will run no-matters-what")
+                }
+    * if the whole try-catch-finally is inside in an function which returns in try block does then finally block execute?
+        yes, it will execute finally block no matters what if it return for an function
+
+            
+
+##################################################################Post_Request####################################################################
+
+
+##################################################################cookies####################################################################
+*cookies are small string that is used to store directly in browser
+*document.cookie provide access to cookie
+*cookies are set by web-browser using set-cookie HTTP-header next time when the request is sent to same domain
+
+# adding cookies
+    document.cookie = "name=albin81298" // adding this cookie to the browser cookie list
+    *cannot replace cookie by same name but it will add as an another cookie
+
+
+
+##################################################################local_storage###################################################################
+*local storage is a web storage object which are not sent to server 
+
+
+
+
+##################################################################Module_exports##################################################################
+
+1.default export:
+2.named export:
+
+##################################################################Ternery_operator#####################################
+                                            let age = 120
+                                            let name = "hisham"
+
+                                            if(name=="hisham")
+                                                name = "hisham"
+                                            else{
+                                                name = ""
+                                            }
+
+
+the problem with above code is that it takes too much space and lines so here comes the application of Ternery_operator
+ternery_operator can be used as:
+                                        name == "hisham" ? "predo" : "hello"
+
+
+################################################Modules################################################################
+*There are two types of exports: Named Exports and Default Exports.
+*modules are a way to organize code into reusable and maintainable components
+
+usually we its possible to reuse code in one file to other but using import export statments so that code in one file can be used inside other code
+
+1.comman js modules            //index.js
+                             function name1(){
+                                console.log('name is')
+                                }
+                                const value = 878;
+
+                                let callName = (name)=>{
+                                console.log("name is",name)
+                                }
+
+                                module.exports = {name1,value,callName};
+
+                                    // index1.js
+                                const {name1,value,callName} = require("./index")
+                                //destructured manner
+                                callName("ashwin");
+                                name1();
+                                console.log(value)
+
+
+
+in here [     module.exports = {value(s),value........}     ] to exports the value from one module
+
+we can use [  const hello = require("./fileName")           ] this to get all values
+            eg:hello.a // a is an variable present anotherFile 
+
+const {required functions} =  require("./fileName")
+
+
+
+2.ES6 modules
+                        export const name = ()=>{
+
+                        }
+
+                        export const name1 = ()=>{
+
+
+                        }
+                        // inother file
+                        import {name,name1} from "./FileName"
+
+###############################################################prototype#################################################################
+
+in js prototype can be used to new properties and methods to an CONSTRUCTOR FUNCTION 
+*
+ex:         function Person(){
+                this.name = "albin";
+                this.age = 61;
+            }
+
+            const person1 = new Person();
+            const person2 = new Person();
+
+            Person.prototype.gender = 'male'
+            Person.prototype.eat = function{
+                //does something
+            }
+
+            Person.prototype.drink = ()=>{
+                // does some thing
+            }
+
+
+uses
+1.prototype makes faster object creation since properties/methods on the prototype dont have to be re-created each time when object is created
+2.methods created in this amnner will have access to private data
+
+################################################class################################################################
+*methods inside class are in prototype 
+*functions inside class does not require function keyword
+                class Bank{
+                    name;
+                    accnumber;
+                    balance=0;
+
+                    constructor(name,balance=0){
+                        this.name = name
+                        this.balance = balance
+                        this.accnumber = date.now()
+                    }
+
+                    deposit(amount){
+                        this.balance += amount
+                    }
+
+                    withdraw(amount){
+                        this.balance -= amount
+                    }
+
+
+                }
+
+                const albin = new Bank("albin");
+
+
+################################################inheritance################################################################
+property by which one class acquires property and behavior off other class
+
+
+
+
+
+
+
+
+
